@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CARY — Carrier Coin | Institutional Overview 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700;800;900&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  /* Core palette — warm amber/slate */
+  --slate:    #141820;
+  --slate2:   #1c2230;
+  --slate3:   #252d3d;
+  --amber:    #e8840a;
+  --amber2:   #f5a030;
+  --amber-lt: #fdf3e3;
+  --amber-glow: rgba(232,132,10,.08);
+  --paper:    #f7f5f0;
+  --white:    #ffffff;
+  --rule:     #e4e0d8;
+  --rule-dk:  rgba(255,255,255,.08);
+  --text:     #16181f;
+  --text2:    #3a3d4a;
+  --text3:    #6b6e7a;
+  --text4:    #9a9da8;
+  --sage:     #3d7a5e;
+  --sage-lt:  #e8f3ed;
+  --rose:     #c0392b;
+  --rose-lt:  #fdecea;
+  --steel:    #2e5b8a;
+  --steel-lt: #e8f0f8;
+  --disp:     'Outfit', 'Helvetica Neue', sans-serif;
+  --sans:     'Outfit', 'Helvetica Neue', sans-serif;
+  --mono:     'Space Mono', monospace;
+  --sh:       0 1px 3px rgba(20,24,32,.06), 0 4px 16px rgba(20,24,32,.05);
+  --sh2:      0 2px 8px rgba(20,24,32,.09), 0 12px 36px rgba(20,24,32,.07);
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{background:var(--paper);color:var(--text);font-family:var(--sans);font-weight:400;line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+
+/* Progress */
+#pbar{position:fixed;top:0;left:0;height:2px;width:0%;background:linear-gradient(90deg,var(--amber),var(--amber2));z-index:9999;transition:width .06s linear}
+
+/* Nav */
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(247,245,240,.95);backdrop-filter:blur(14px);border-bottom:1px solid var(--rule);display:flex;align-items:center;justify-content:space-between;padding:0 40px;height:56px}
+.nav-brand{display:flex;align-items:center;gap:10px}
+.nav-logo{font-family:var(--disp);font-size:18px;font-weight:800;color:var(--slate);letter-spacing:-.02em}
+.nav-logo .dot{color:var(--amber)}
+.nav-badge{background:var(--slate);color:var(--amber2);font-family:var(--mono);font-size:9px;font-weight:700;letter-spacing:.1em;padding:3px 8px;border-radius:2px}
+.nav-links{display:flex;gap:2px;align-items:center}
+.nav-links a{font-family:var(--sans);font-size:11px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--text3);text-decoration:none;padding:6px 11px;border-radius:2px;transition:all .15s}
+.nav-links a:hover,.nav-links a.active{color:var(--slate);background:var(--amber-glow)}
+.nav-cta{background:var(--amber)!important;color:var(--white)!important;padding:6px 16px!important;border-radius:2px;font-weight:700!important}
+.nav-cta:hover{background:var(--amber2)!important;color:var(--white)!important}
+
+/* Layout */
+section{padding:88px 0}
+.container{max-width:1160px;margin:0 auto;padding:0 40px}
+.cw{max-width:1360px;margin:0 auto;padding:0 40px}
+
+/* Reveal */
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .6s cubic-bezier(.4,0,.2,1),transform .6s cubic-bezier(.4,0,.2,1)}
+.reveal.in{opacity:1;transform:none}
+.d1{transition-delay:.07s}.d2{transition-delay:.14s}.d3{transition-delay:.21s}.d4{transition-delay:.28s}
+
+/* Typography */
+.eyebrow{font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--amber);display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.eline{display:block;width:22px;height:1px;background:var(--amber);flex-shrink:0}
+.section-h{font-family:var(--disp);font-size:clamp(34px,4.5vw,60px);font-weight:800;color:var(--slate);line-height:.97;letter-spacing:-.03em;margin-bottom:20px}
+.section-h .a{color:var(--amber)}
+.section-lead{font-size:16px;font-weight:300;color:var(--text3);line-height:1.72;max-width:540px}
+.racc{width:28px;height:2px;background:var(--amber);margin-bottom:22px}
+
+/* Cards */
+.card{background:var(--white);border:1px solid var(--rule);border-radius:4px;box-shadow:var(--sh);transition:box-shadow .22s,transform .22s,border-color .22s}
+.card:hover{box-shadow:var(--sh2);transform:translateY(-2px);border-color:rgba(232,132,10,.3)}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;gap:8px;font-family:var(--sans);font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;border-radius:3px;transition:all .18s;cursor:pointer;border:none}
+.btn-amber{background:var(--amber);color:#fff;padding:13px 28px}
+.btn-amber:hover{background:var(--amber2);transform:translateY(-1px);box-shadow:0 6px 22px rgba(232,132,10,.25)}
+.btn-slate{background:var(--slate);color:#fff;padding:13px 28px}
+.btn-slate:hover{background:var(--slate2);transform:translateY(-1px)}
+.btn-outline{background:transparent;color:var(--slate);padding:12px 28px;border:1.5px solid var(--slate)}
+.btn-outline:hover{background:var(--slate);color:#fff}
+.btn-ghost{background:rgba(255,255,255,.08);color:rgba(255,255,255,.75);padding:12px 24px;border:1px solid rgba(255,255,255,.15)}
+.btn-ghost:hover{border-color:var(--amber);color:var(--amber2)}
+
+/* Tags */
+.tag{display:inline-flex;align-items:center;font-family:var(--mono);font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:4px 8px;border-radius:2px}
+.tag-amber{background:var(--amber-lt);color:var(--amber)}
+.tag-sage{background:var(--sage-lt);color:var(--sage)}
+.tag-rose{background:var(--rose-lt);color:var(--rose)}
+.tag-slate{background:var(--slate);color:var(--amber2)}
+.tag-steel{background:var(--steel-lt);color:var(--steel)}
+
+.hr{border:none;border-top:1px solid var(--rule)}
+
+/* ═══════════════════════════════
+   HERO
+═══════════════════════════════ */
+.hero-outer{background:var(--slate);position:relative;overflow:hidden;padding-top:56px}
+.hero-outer::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.02) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.02) 1px,transparent 1px);background-size:72px 72px}
+/* warm amber glow, top right */
+.hero-outer::after{content:'';position:absolute;top:-30%;right:-15%;width:65vw;height:85vh;background:radial-gradient(ellipse,rgba(232,132,10,.09) 0%,transparent 65%);pointer-events:none}
+
+.hero-inner{display:grid;grid-template-columns:1.1fr 1fr;min-height:70vh;position:relative;z-index:1}
+.hero-left{padding:80px 56px 80px 40px;display:flex;flex-direction:column;justify-content:center}
+.hero-right{display:flex;align-items:center;justify-content:center;padding:60px 40px 60px 0}
+
+.hero-tag{font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--amber2);display:flex;align-items:center;gap:12px;margin-bottom:30px}
+.hero-tag::before{content:'';width:22px;height:1px;background:var(--amber)}
+
+.hero-h{font-family:var(--disp);font-size:clamp(52px,7.5vw,100px);font-weight:900;color:#fff;line-height:.87;letter-spacing:-.04em;margin-bottom:18px}
+.hero-h .a{color:var(--amber2);font-weight:200;font-style:italic}
+
+.hero-sub{font-family:var(--mono);font-size:10px;font-weight:400;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:30px}
+
+.hero-desc{font-size:15px;font-weight:300;color:rgba(255,255,255,.6);line-height:1.78;max-width:460px;margin-bottom:40px}
+.hero-desc strong{color:#fff;font-weight:500}
+
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap}
+
+/* Stats strip */
+.stats-strip{background:var(--white);border-top:2px solid var(--amber);display:grid;grid-template-columns:repeat(5,1fr)}
+.ss{padding:24px 28px;border-right:1px solid var(--rule)}
+.ss:last-child{border-right:none}
+.ss-num{font-family:var(--disp);font-size:36px;font-weight:900;color:var(--slate);line-height:1;margin-bottom:4px;letter-spacing:-.03em}
+.ss-label{font-family:var(--mono);font-size:9px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--text3)}
+.ss-sub{font-size:11px;color:var(--text4);margin-top:3px;font-weight:300}
+
+/* Hero panel */
+.hero-panel{background:rgba(255,255,255,.04);border:1px solid rgba(232,132,10,.15);border-radius:6px;padding:44px 36px;display:flex;flex-direction:column;align-items:center;gap:26px;width:100%;max-width:400px}
+.cary-svg{animation:float 5s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+.panel-name{font-family:var(--disp);font-size:22px;font-weight:900;color:#fff;letter-spacing:-.01em;text-align:center}
+.panel-name small{display:block;font-family:var(--mono);font-size:9px;font-weight:400;color:var(--amber2);letter-spacing:.18em;margin-top:6px;text-transform:uppercase}
+.panel-chips{display:flex;gap:7px;flex-wrap:wrap;justify-content:center}
+.chip{background:rgba(255,255,255,.06);border:1px solid rgba(232,132,10,.18);border-radius:2px;padding:4px 10px;font-family:var(--mono);font-size:9px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.6)}
+.chip.on{border-color:var(--amber);color:var(--amber2)}
+
+/* ═══════════════════════════════
+   SUMMARY
+═══════════════════════════════ */
+#summary{background:var(--white);padding:72px 0}
+.sum-grid{display:grid;grid-template-columns:2fr 1fr;gap:64px;align-items:start}
+.sum-body{font-size:15px;line-height:1.85;color:var(--text2);font-weight:300}
+.sum-body strong{font-weight:600;color:var(--slate)}
+.sum-body p+p{margin-top:18px}
+.sum-body a{color:var(--slate);font-weight:600;text-decoration:none;border-bottom:1px solid var(--amber);padding-bottom:1px}
+
+.spec{border:1px solid var(--rule);border-radius:3px;overflow:hidden;margin-bottom:14px}
+.spec-row{display:grid;grid-template-columns:1fr 1.5fr;border-bottom:1px solid var(--rule)}
+.spec-row:last-child{border-bottom:none}
+.sk{padding:12px 15px;font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--text3);background:var(--paper);border-right:1px solid var(--rule)}
+.sv{padding:12px 15px;font-family:var(--sans);font-size:13px;font-weight:600;color:var(--slate)}
+
+/* ═══════════════════════════════
+   HOW IT WORKS
+═══════════════════════════════ */
+#howworks{background:var(--paper)}
+.hw-grid{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center;margin-bottom:60px}
+
+.flow-card{background:var(--white);border:1px solid var(--rule);border-radius:4px;overflow:hidden;box-shadow:var(--sh2)}
+.flow-top{background:var(--slate);padding:14px 22px;font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--amber2);display:flex;justify-content:space-between}
+.flow-step{display:flex;align-items:stretch;border-bottom:1px solid var(--rule)}
+.flow-step:last-child{border-bottom:none}
+.flow-num{width:48px;background:var(--paper);display:flex;align-items:center;justify-content:center;font-family:var(--disp);font-size:20px;font-weight:900;color:var(--text4);flex-shrink:0;border-right:1px solid var(--rule)}
+.flow-body{padding:15px 17px;flex:1}
+.flow-title{font-size:13px;font-weight:700;color:var(--slate);margin-bottom:2px}
+.flow-desc{font-size:12px;color:var(--text3);line-height:1.5;font-weight:300}
+.flow-val{padding:15px 17px;font-family:var(--mono);font-size:13px;font-weight:700;color:var(--slate);display:flex;align-items:center;white-space:nowrap;flex-shrink:0}
+
+.margin-bar{margin-top:18px;background:var(--slate);border-radius:4px;padding:20px 22px;display:flex;align-items:center;gap:18px}
+.margin-big{font-family:var(--disp);font-size:50px;font-weight:900;color:var(--amber2);line-height:1;white-space:nowrap}
+.margin-txt{font-size:13px;color:rgba(255,255,255,.55);line-height:1.58}
+.margin-txt strong{color:#fff;font-weight:500}
+
+.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.pillar{background:var(--white);border:1px solid var(--rule);border-top:2px solid;border-radius:4px;padding:26px 22px;box-shadow:var(--sh);transition:all .22s}
+.pillar:hover{transform:translateY(-3px);box-shadow:var(--sh2)}
+.pnum{font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:.14em;color:var(--text4);margin-bottom:14px}
+.ptitle{font-family:var(--disp);font-size:20px;font-weight:700;color:var(--slate);margin-bottom:10px;line-height:1.1;letter-spacing:-.02em}
+.pbody{font-size:13px;color:var(--text3);line-height:1.65;font-weight:300}
+
+/* ═══════════════════════════════
+   USE CASES
+═══════════════════════════════ */
+#usecases{background:var(--white)}
+.uc-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start;margin-top:48px}
+.uc-table{border:1px solid var(--rule);border-radius:4px;overflow:hidden;box-shadow:var(--sh)}
+.uc-thead{background:var(--slate);display:grid;grid-template-columns:2fr 1fr 1fr 1fr}
+.uc-row{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;border-bottom:1px solid var(--rule);transition:background .15s}
+.uc-row:last-child{border-bottom:none}
+.uc-row:hover{background:var(--amber-glow)}
+.uc-c{padding:11px 13px;font-size:12px;border-right:1px solid var(--rule);display:flex;align-items:center}
+.uc-c:last-child{border-right:none}
+.uc-thead .uc-c{font-family:var(--mono);font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.45);border-color:rgba(255,255,255,.06)}
+.uc-c.co{font-weight:700;color:var(--slate)}
+.uc-c.be{color:var(--rose);font-family:var(--mono)}
+.uc-c.af{color:var(--sage);font-family:var(--mono);font-weight:700}
+.uc-c.ul{color:var(--amber);font-weight:700;font-family:var(--mono)}
+
+.nb{background:var(--paper);border:1px solid var(--rule);border-left:2px solid;padding:17px 19px;border-radius:0 4px 4px 0}
+.nb-title{font-size:13px;font-weight:700;color:var(--slate);margin-bottom:5px}
+.nb-body{font-size:13px;color:var(--text2);line-height:1.62;font-weight:300}
+.uc-nar{display:flex;flex-direction:column;gap:12px}
+
+/* ═══════════════════════════════
+   MARKET — charts
+═══════════════════════════════ */
+#market{background:var(--paper)}
+.mkt-r1{display:grid;grid-template-columns:1.5fr 1fr;gap:20px;margin-bottom:20px}
+.mkt-r2{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+
+.chart-box{background:var(--white);border:1px solid var(--rule);border-radius:4px;box-shadow:var(--sh);overflow:hidden}
+.ch{padding:13px 20px;border-bottom:1px solid var(--rule);display:flex;align-items:center;justify-content:space-between}
+.ch-title{font-size:12px;font-weight:700;color:var(--slate)}
+.ch-sub{font-family:var(--mono);font-size:10px;color:var(--text4)}
+.cb{padding:20px}
+
+/* Horizontal bars */
+.hb-item{margin-bottom:13px}
+.hb-item:last-child{margin-bottom:0}
+.hb-meta{display:flex;justify-content:space-between;margin-bottom:5px}
+.hb-name{font-size:12px;color:var(--text2);font-weight:500}
+.hb-val{font-family:var(--mono);font-size:11px;color:var(--slate);font-weight:700}
+.hb-track{height:8px;background:var(--paper);border-radius:1px;overflow:hidden}
+.hb-fill{height:100%;width:0%;border-radius:1px;transition:width 1.5s cubic-bezier(.4,0,.2,1)}
+
+/* Ring chart — SVG based, no dodgy strokeDasharray tricks */
+.ring-box{display:flex;flex-direction:column;align-items:center}
+.ring-label-main{font-family:var(--disp);font-size:28px;font-weight:900;color:var(--slate);line-height:1;margin-top:14px}
+.ring-label-sub{font-family:var(--mono);font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--text3);margin-top:4px}
+
+/* Stacked bar */
+.sbar{display:flex;gap:2px;height:30px;border-radius:2px;overflow:hidden;margin:15px 0 11px}
+.sb-s{height:100%;width:0%;transition:width 1.5s cubic-bezier(.4,0,.2,1)}
+.sb-leg{display:flex;flex-wrap:wrap;gap:9px}
+.sb-li{display:flex;align-items:center;gap:5px;font-size:11px;color:var(--text2);font-weight:400}
+.sb-dot{width:8px;height:8px;border-radius:1px;flex-shrink:0}
+
+/* Stat highlight */
+.stat-hl{padding:20px;text-align:center}
+.sh-num{font-family:var(--disp);font-size:40px;font-weight:900;color:var(--slate);line-height:1;margin-bottom:5px;letter-spacing:-.03em}
+.sh-label{font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--text3)}
+.sh-sub{font-size:12px;color:var(--text4);margin-top:3px;font-weight:300}
+
+/* ═══════════════════════════════
+   REGULATORY
+═══════════════════════════════ */
+#regulatory{background:var(--white)}
+.reg-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;margin-top:48px}
+
+.tl{display:flex;flex-direction:column;position:relative;padding-left:28px}
+.tl::before{content:'';position:absolute;left:7px;top:8px;bottom:8px;width:1px;background:linear-gradient(180deg,var(--amber),rgba(232,132,10,.1))}
+.tl-item{position:relative;padding:0 0 26px 24px}
+.tl-item:last-child{padding-bottom:0}
+.tl-dot{position:absolute;left:-21px;top:5px;width:14px;height:14px;border-radius:50%;border:2px solid var(--white)}
+.tl-date{font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:.12em;color:var(--text4);margin-bottom:4px}
+.tl-title{font-size:14px;font-weight:700;color:var(--slate);margin-bottom:4px}
+.tl-desc{font-size:13px;color:var(--text3);line-height:1.55;font-weight:300}
+.tl-tag{margin-top:7px}
+
+.juris{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px}
+.jc{background:var(--paper);border:1px solid var(--rule);border-radius:4px;padding:14px 15px;transition:all .18s}
+.jc:hover{border-color:var(--amber);background:var(--amber-glow)}
+.jc-flag{font-size:16px;margin-bottom:6px;display:block}
+.jc-name{font-size:13px;font-weight:700;color:var(--slate);margin-bottom:4px}
+.jc-body{font-size:11px;color:var(--text3);line-height:1.5;font-weight:300}
+.jc-status{margin-top:7px}
+
+.comp-profile{background:var(--slate);border-radius:4px;padding:18px 20px}
+.cp-title{font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--amber2);margin-bottom:11px}
+.cp-row{display:flex;align-items:flex-start;gap:10px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:12px}
+.cp-row:last-child{border-bottom:none}
+.cp-check{color:var(--amber2);font-size:13px;flex-shrink:0;margin-top:1px}
+.cp-text{color:rgba(255,255,255,.65);line-height:1.5;font-weight:300}
+
+/* ═══════════════════════════════
+   COMPETITIVE
+═══════════════════════════════ */
+#competitive{background:var(--paper)}
+.ctab{border:1px solid var(--rule);border-radius:4px;overflow:hidden;box-shadow:var(--sh);margin-top:48px}
+.ct-head{display:grid;grid-template-columns:1.8fr repeat(4,1fr);background:var(--slate)}
+.ct-row{display:grid;grid-template-columns:1.8fr repeat(4,1fr);border-bottom:1px solid var(--rule);transition:background .15s}
+.ct-row:last-child{border-bottom:none}
+.ct-row:hover{background:var(--amber-glow)}
+.ct-row.alt{background:rgba(20,24,32,.02)}
+.ctd{padding:12px 15px;font-size:12px;border-right:1px solid rgba(255,255,255,.06);display:flex;align-items:center}
+.ct-row .ctd{border-right-color:var(--rule)}
+.ctd:last-child{border-right:none}
+.ctd.hd{font-family:var(--mono);font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.4)}
+.ctd.hd.ca{color:var(--amber2)}
+.ctd.ft{font-weight:600;color:var(--text2)}
+.ctd.cv{background:rgba(232,132,10,.05);font-weight:700;color:var(--slate)}
+.yes{color:var(--sage);font-size:14px}
+.no{color:var(--rose);font-size:14px}
+.par{color:var(--amber);font-size:13px}
+
+/* ═══════════════════════════════
+   TOKENOMICS
+═══════════════════════════════ */
+#tokenomics{background:var(--white)}
+.tok-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;margin-top:48px}
+
+.tok-table{background:var(--white);border:1px solid var(--rule);border-radius:4px;overflow:hidden;box-shadow:var(--sh)}
+.tok-thead{background:var(--slate);padding:12px 18px;font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--amber2)}
+.tok-row{display:grid;grid-template-columns:14px 1fr auto auto;align-items:center;gap:12px;padding:13px 18px;border-bottom:1px solid var(--rule);transition:background .15s}
+.tok-row:last-child{border-bottom:none}
+.tok-row:hover{background:var(--amber-glow)}
+.tok-sw{width:6px;height:26px;border-radius:1px;flex-shrink:0}
+.tok-name{font-size:13px;font-weight:600;color:var(--slate)}
+.tok-desc{font-size:11px;color:var(--text4);font-weight:300}
+.tok-pct{font-family:var(--disp);font-size:20px;font-weight:900;color:var(--slate);white-space:nowrap;text-align:right;min-width:50px}
+.tok-bar{width:64px;height:5px;background:var(--paper);border-radius:1px;overflow:hidden}
+.tok-fill{height:100%;border-radius:1px;width:0%;transition:width 1.5s cubic-bezier(.4,0,.2,1)}
+
+.demand-col{display:flex;flex-direction:column;gap:13px}
+.de-card{background:var(--paper);border:1px solid var(--rule);border-radius:4px;padding:20px;transition:all .2s}
+.de-card:hover{border-color:var(--amber);background:var(--white)}
+.de-num{font-family:var(--disp);font-size:38px;font-weight:900;line-height:1;letter-spacing:-.03em;margin-bottom:3px}
+.de-label{font-family:var(--mono);font-size:9px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--text3);margin-bottom:8px}
+.de-desc{font-size:13px;color:var(--text2);line-height:1.62;font-weight:300}
+
+.fw-card{background:var(--paper);border:1px solid var(--rule);border-radius:4px;padding:22px;text-align:center}
+.fw-cap{font-size:12px;color:var(--text3);line-height:1.62;max-width:280px;margin:10px auto 0;font-weight:300}
+
+/* Allocation ring (also SVG based) */
+.tok-ring-card{background:var(--paper);border:1px solid var(--rule);border-radius:4px;padding:18px;margin-top:14px}
+.tok-ring-inner{display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+
+/* ═══════════════════════════════
+   ROADMAP
+═══════════════════════════════ */
+#roadmap{background:var(--paper)}
+.rm-phases{display:grid;grid-template-columns:repeat(5,1fr);gap:0;margin-top:56px;position:relative}
+.rm-phases::before{content:'';position:absolute;top:19px;left:10%;right:10%;height:1px;background:linear-gradient(90deg,var(--amber),rgba(232,132,10,.4),rgba(232,132,10,.05))}
+.rm-col{display:flex;flex-direction:column;align-items:center;position:relative}
+.rm-dot{width:38px;height:38px;border-radius:50%;border:1.5px solid;background:var(--paper);display:flex;align-items:center;justify-content:center;font-size:15px;margin-bottom:16px;position:relative;z-index:1;transition:all .28s}
+.rm-col:hover .rm-dot{transform:scale(1.15);box-shadow:0 0 0 5px rgba(232,132,10,.1)}
+.rm-tag{font-family:var(--mono);font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-bottom:5px}
+.rm-title{font-family:var(--disp);font-size:14px;font-weight:700;color:var(--slate);text-align:center;margin-bottom:6px;line-height:1.2;letter-spacing:-.01em}
+.rm-bul{font-size:11px;color:var(--text3);text-align:center;line-height:1.65;font-weight:300}
+.rm-cta{margin-top:36px;display:flex;justify-content:center}
+.rm-badge{background:var(--slate);color:var(--amber2);font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:12px 24px;border-radius:2px;border:1px solid rgba(232,132,10,.2)}
+
+/* ═══════════════════════════════
+   CTA
+═══════════════════════════════ */
+#cta{background:var(--slate);padding:96px 0;position:relative;overflow:hidden}
+#cta::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.015) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.015) 1px,transparent 1px);background-size:72px 72px}
+#cta::after{content:'';position:absolute;bottom:-25%;left:-10%;width:60vw;height:80vh;background:radial-gradient(ellipse,rgba(232,132,10,.07) 0%,transparent 65%);pointer-events:none}
+.cta-inner{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center;position:relative;z-index:1}
+.cta-h{font-family:var(--disp);font-size:clamp(36px,5vw,64px);font-weight:900;color:#fff;line-height:.93;letter-spacing:-.04em;margin-bottom:20px}
+.cta-h .a{color:var(--amber2);font-weight:200;font-style:italic}
+.cta-body{font-size:15px;font-weight:300;color:rgba(255,255,255,.55);line-height:1.75;margin-bottom:36px}
+.cta-btns{display:flex;gap:12px;flex-wrap:wrap}
+.cta-url{margin-top:18px;padding:12px 16px;background:rgba(232,132,10,.1);border:1px solid rgba(232,132,10,.25);border-radius:2px;font-family:var(--mono);font-size:13px;font-weight:700;color:var(--amber2);text-align:center;letter-spacing:.06em}
+.cta-url a{color:var(--amber2);text-decoration:none}
+.cta-url a:hover{text-decoration:underline}
+.cta-cards{display:flex;flex-direction:column;gap:11px}
+.cta-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:4px;padding:16px 18px;display:flex;align-items:flex-start;gap:12px;transition:border-color .18s}
+.cta-card:hover{border-color:rgba(232,132,10,.35)}
+.cta-icon{font-size:19px;flex-shrink:0;margin-top:2px}
+.cta-card-title{font-size:13px;font-weight:700;color:#fff;margin-bottom:3px}
+.cta-card-desc{font-size:12px;color:rgba(255,255,255,.45);line-height:1.5;font-weight:300}
+
+/* Footer */
+footer{background:var(--slate);border-top:1px solid rgba(255,255,255,.06);padding:22px 40px;display:flex;align-items:center;justify-content:space-between;font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:.1em;color:rgba(255,255,255,.28);flex-wrap:wrap;gap:10px;text-transform:uppercase}
+footer a{color:rgba(255,255,255,.32);text-decoration:none}
+footer a:hover{color:var(--amber2)}
+
+/* Responsive */
+@media(max-width:960px){
+  nav .nav-links{display:none}
+  .hero-inner{grid-template-columns:1fr}
+  .hero-right{display:none}
+  .stats-strip{grid-template-columns:repeat(3,1fr)}
+  .sum-grid,.hw-grid,.uc-grid,.reg-grid,.tok-grid,.cta-inner{grid-template-columns:1fr;gap:32px}
+  .ct-head,.ct-row{grid-template-columns:1.5fr repeat(2,1fr)}
+  .ctd:nth-child(n+4){display:none}
+  .rm-phases{grid-template-columns:1fr 1fr;gap:24px}
+  .rm-phases::before{display:none}
+  .mkt-r1,.mkt-r2{grid-template-columns:1fr}
+  .pillars{grid-template-columns:1fr}
+  .juris{grid-template-columns:1fr}
+}
+@media(max-width:600px){
+  section{padding:64px 0}
+  .container,.cw{padding:0 20px}
+  nav{padding:0 20px}
+  .hero-left{padding:44px 24px}
+  .stats-strip{grid-template-columns:repeat(2,1fr)}
+  .rm-phases{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<div id="pbar"></div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-brand">
+    <div class="nav-logo">CA<span class="dot">R</span>Y</div>
+    <div class="nav-badge">Carrier Coin</div>
+  </div>
+  <div class="nav-links">
+    <a href="#summary">Overview</a>
+    <a href="#howworks">Mechanics</a>
+    <a href="#market">Market</a>
+    <a href="#regulatory">Regulatory</a>
+    <a href="#tokenomics">Tokenomics</a>
+    <a href="#roadmap">Roadmap</a>
+    <a href="https://cary.nexa9.co" target="_blank" rel="noopener" class="nav-cta">cary.nexa9.co →</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero-outer">
+  <div class="hero-inner cw">
+    <div class="hero-left reveal">
+      <div class="hero-tag">Institutional Overview · May 2026</div>
+      <h1 class="hero-h">Carrier<br><span class="a">Coin</span><br>CARY</h1>
+      <p class="hero-sub">NextGen Capital Generation · Utility Token Infrastructure</p>
+      <p class="hero-desc">CARY is a <strong>revenue-backed utility coin</strong> tied to DSW-Europe's live telecom operations — delivering a structural, quantified margin advantage to every counterparty in the network. Not speculative yield.</p>
+      <div class="hero-btns">
+        <a href="https://cary.nexa9.co" target="_blank" rel="noopener" class="btn btn-amber">Launch Prototype →</a>
+        <a href="#summary" class="btn btn-ghost">Read the Case</a>
+      </div>
+    </div>
+    <div class="hero-right reveal d2">
+      <div class="hero-panel">
+        <svg class="cary-svg" width="110" height="110" viewBox="0 0 110 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <polygon points="55,4 101,29 101,81 55,106 9,81 9,29" fill="rgba(232,132,10,.06)" stroke="rgba(232,132,10,.28)" stroke-width="1.5"/>
+          <polygon points="55,16 91,36 91,74 55,94 19,74 19,36" fill="none" stroke="rgba(232,132,10,.1)" stroke-width="1"/>
+          <path d="M71 55C71 64.94 62.94 73 53 73C43.06 73 35 64.94 35 55C35 45.06 43.06 37 53 37C59.6 37 65.3 40.5 68.4 45.7" stroke="url(#ag)" stroke-width="5.5" stroke-linecap="round" fill="none"/>
+          <circle r="4.5" fill="#e8840a"><animateMotion dur="6s" repeatCount="indefinite" path="M55,55 m-46,0 a46,46 0 1,0 92,0 a46,46 0 1,0 -92,0"/></circle>
+          <circle r="2.5" fill="rgba(245,160,48,.6)"><animateMotion dur="3.8s" repeatCount="indefinite" path="M55,55 m-34,0 a34,34 0 1,1 68,0 a34,34 0 1,1 -68,0"/></circle>
+          <defs><linearGradient id="ag" x1="35" y1="55" x2="71" y2="55" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#e8840a"/><stop offset="100%" stop-color="rgba(255,255,255,.85)"/></linearGradient></defs>
+        </svg>
+        <div class="panel-name">CARRIER COIN<small>CARY · Utility Token · 2026</small></div>
+        <div class="panel-chips">
+          <span class="chip on">Solana</span><span class="chip on">ETH 2.0</span><span class="chip on">MiCA</span><span class="chip">Live POC</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="stats-strip">
+    <div class="ss reveal"><div class="ss-num"><span class="count-up" data-target="10">0</span>%</div><div class="ss-label">Invoice Discount</div><div class="ss-sub">Paid in CARY tokens</div></div>
+    <div class="ss reveal d1"><div class="ss-num" style="color:var(--amber)">12–14%</div><div class="ss-label">Effective Margin</div><div class="ss-sub">vs 2–4% standard</div></div>
+    <div class="ss reveal d2"><div class="ss-num" style="color:var(--sage)">3–5×</div><div class="ss-label">Margin Uplift</div><div class="ss-sub">For voice carriers</div></div>
+    <div class="ss reveal d3"><div class="ss-num" style="color:var(--steel)">9–12<span style="font-size:20px;font-weight:500">wk</span></div><div class="ss-label">To Open Market</div><div class="ss-sub">From board approval</div></div>
+    <div class="ss reveal d4"><div class="ss-num" style="color:var(--sage)">LIVE</div><div class="ss-label">POC Status</div><div class="ss-sub">cary.nexa9.co</div></div>
+  </div>
+</div>
+
+<!-- SUMMARY -->
+<section id="summary">
+  <div class="container">
+    <div class="sum-grid">
+      <div class="reveal">
+        <div class="eyebrow"><span class="eline"></span>Executive Summary</div>
+        <div class="racc"></div>
+        <div class="sum-body">
+          <p><strong>Carrier Coin (CARY)</strong> is an operational utility token built on Solana, directly tied to the revenue base of DSW-Europe — a live telecom operator transacting with major network carriers including Viber, Deutsche Telekom, and Apelby.</p>
+          <p>Unlike speculative digital assets, CARY derives its intrinsic utility from a concrete commercial mechanic: any counterparty that settles a DSW-Europe invoice in CARY receives a <strong>10% discount on the invoice value</strong>. This transforms the token from a financial instrument into a rational treasury decision for every buyer in the supply chain.</p>
+          <p>The structural impact is most visible in voice traffic settlement, where standard gross margins sit between 2–4%. By electing to pay in CARY, a carrier converts that margin into <strong>12–14% net effective yield</strong> — a 3–5× improvement without renegotiating a single contract.</p>
+          <p>The technical proof of concept is <strong>fully delivered and functional</strong>, operating as a closed market at <a href="https://cary.nexa9.co" target="_blank">cary.nexa9.co</a>. Open-market launch requires no additional engineering — only legal structuring, investor documentation, and MiCA white paper publication.</p>
+          <p>This document presents the investment case, market context, regulatory positioning, and go-to-market architecture for CARY's commercial launch into the B2B telecom settlement market.</p>
+        </div>
+      </div>
+      <div class="reveal d2">
+        <div class="spec">
+          <div class="spec-row"><div class="sk">Token</div><div class="sv">Carrier Coin (CARY)</div></div>
+          <div class="spec-row"><div class="sk">Blockchain</div><div class="sv">Solana / ETH 2.0</div></div>
+          <div class="spec-row"><div class="sk">MiCA Class</div><div class="sv">Other Crypto-Assets</div></div>
+          <div class="spec-row"><div class="sk">Primary Mkt</div><div class="sv">DSW-Europe Revenue-Tied</div></div>
+          <div class="spec-row"><div class="sk">Secondary</div><div class="sv">Invoice settlement + exchange</div></div>
+          <div class="spec-row"><div class="sk">Status</div><div class="sv" style="color:var(--sage)">POC Live · Launch Ready</div></div>
+        </div>
+        <a href="https://cary.nexa9.co" target="_blank" rel="noopener" class="btn btn-slate" style="width:100%;justify-content:center">Access Live Prototype →</a>
+        <div style="margin-top:10px;padding:11px 14px;background:var(--paper);border:1px solid var(--rule);border-radius:2px;font-family:var(--mono);font-size:10px;font-weight:700;color:var(--text3);text-align:center;letter-spacing:.08em">cary.nexa9.co — LIVE &amp; OPERATIONAL</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="howworks">
+  <div class="container">
+    <hr class="hr" style="margin-bottom:56px">
+    <div class="hw-grid">
+      <div class="reveal">
+        <div class="eyebrow"><span class="eline"></span>Chapter 01 — Mechanics</div>
+        <div class="racc"></div>
+        <h2 class="section-h">How CARY<br><span class="a">Creates Value</span></h2>
+        <p class="section-lead">A straightforward commercial discount mechanism on blockchain rails — with quantifiable, immediate ROI for every participant in DSW-Europe's supply chain.</p>
+        <p style="font-size:14px;color:var(--text3);margin-top:20px;line-height:1.78;font-weight:300">DSW-Europe issues invoices to telecom partners for voice traffic, SMS routing, and data connectivity. Partners who elect to pay in CARY receive a guaranteed 10% reduction. The economics are binary and transparent — no opaque staking, no yield curves. It operates like a prompt payment discount, delivered with blockchain settlement certainty, auditability, and speed.</p>
+      </div>
+      <div class="reveal d2">
+        <div class="flow-card">
+          <div class="flow-top"><span>Payment Flow — CARY Settlement</span><span style="color:rgba(255,255,255,.3)">vs Standard</span></div>
+          <div class="flow-step">
+            <div class="flow-num" style="color:var(--amber)">01</div>
+            <div class="flow-body"><div class="flow-title">DSW-Europe Issues Invoice</div><div class="flow-desc">Standard commercial invoice for voice, SMS, or connectivity services to carrier partner</div></div>
+            <div class="flow-val">$10,000</div>
+          </div>
+          <div class="flow-step">
+            <div class="flow-num" style="color:var(--amber2)">02</div>
+            <div class="flow-body"><div class="flow-title">Carrier Elects CARY Settlement</div><div class="flow-desc">Partner acquires CARY via DSW-Europe platform or open market exchange</div></div>
+            <div class="flow-val" style="color:var(--amber2)">Acquire</div>
+          </div>
+          <div class="flow-step">
+            <div class="flow-num" style="color:var(--steel)">03</div>
+            <div class="flow-body"><div class="flow-title">10% Discount Applied</div><div class="flow-desc">Invoice settled at $9,000 — automatically verified on-chain, immutable</div></div>
+            <div class="flow-val" style="color:var(--steel)">$9,000</div>
+          </div>
+          <div class="flow-step">
+            <div class="flow-num" style="color:var(--sage)">04</div>
+            <div class="flow-body"><div class="flow-title">Margin Transformation Complete</div><div class="flow-desc">Carrier retains $1,000 per $10K invoice — permanently improving unit economics</div></div>
+            <div class="flow-val" style="color:var(--sage)">+$1,000</div>
+          </div>
+        </div>
+        <div class="margin-bar">
+          <div class="margin-big">3–5×</div>
+          <div class="margin-txt"><strong>Voice carrier margin transformation</strong><br>Standard gross margin: 2–4%<br>CARY-settled effective margin: 12–14%<br>Structural uplift. Zero renegotiation required.</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin:0 0 24px" class="reveal"><div class="eyebrow"><span class="eline"></span>Three Value Pillars</div></div>
+    <div class="pillars">
+      <div class="pillar reveal" style="border-top-color:var(--amber)">
+        <div class="pnum">01 / 03</div>
+        <div class="ptitle">Revenue-Backed Utility</div>
+        <div class="pbody">CARY's demand is anchored to DSW-Europe's real commercial invoice flow — not algorithms or speculation. Every token represents a rational economic decision by a counterparty seeking margin improvement. It is cheaper to hold CARY than not to.</div>
+      </div>
+      <div class="pillar reveal d2" style="border-top-color:var(--slate)">
+        <div class="pnum">02 / 03</div>
+        <div class="ptitle">Self-Reinforcing Demand Engine</div>
+        <div class="pbody">The 10% discount creates a structural incentive loop: more partners adopt CARY → higher effective revenue per invoice → more volume flows through the token → broader secondary liquidity. The demand signal is entirely independent of price speculation.</div>
+      </div>
+      <div class="pillar reveal d3" style="border-top-color:var(--sage)">
+        <div class="pnum">03 / 03</div>
+        <div class="ptitle">Institutional Accessibility</div>
+        <div class="pbody">CARY opens investment exposure to B2B telecom infrastructure — historically inaccessible to non-operators. The token provides a regulated, liquid instrument tied to a well-understood revenue stream in a trillion-dollar global sector.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- USE CASES -->
+<section id="usecases">
+  <div class="container">
+    <hr class="hr" style="margin-bottom:56px">
+    <div class="reveal">
+      <div class="eyebrow"><span class="eline"></span>Chapter 02 — Commercial Application</div>
+      <div class="racc"></div>
+      <h2 class="section-h">Real-World Impact<br><span class="a">by Partner Type</span></h2>
+      <p class="section-lead">Measurable margin transformation across every counterparty in DSW-Europe's network.</p>
+    </div>
+    <div class="uc-grid">
+      <div class="reveal d1">
+        <div class="uc-table">
+          <div class="uc-thead">
+            <div class="uc-c">Partner / Segment</div>
+            <div class="uc-c">Std. Margin</div>
+            <div class="uc-c">CARY Margin</div>
+            <div class="uc-c">Uplift</div>
+          </div>
+          <div class="uc-row"><div class="uc-c co">Viber (VoIP Traffic)</div><div class="uc-c be">2–3%</div><div class="uc-c af">12–13%</div><div class="uc-c ul">+4–5×</div></div>
+          <div class="uc-row"><div class="uc-c co">Deutsche Telekom</div><div class="uc-c be">3–4%</div><div class="uc-c af">13–14%</div><div class="uc-c ul">+3–4×</div></div>
+          <div class="uc-row"><div class="uc-c co">Apelby (Voice Carrier)</div><div class="uc-c be">2–4%</div><div class="uc-c af">12–14%</div><div class="uc-c ul">+3–5×</div></div>
+          <div class="uc-row"><div class="uc-c co">Regional SMS Operator</div><div class="uc-c be">5–8%</div><div class="uc-c af">15–18%</div><div class="uc-c ul">+2–3×</div></div>
+          <div class="uc-row"><div class="uc-c co">Data Connectivity</div><div class="uc-c be">8–12%</div><div class="uc-c af">18–22%</div><div class="uc-c ul">+1.5–2×</div></div>
+        </div>
+        <div style="display:flex;gap:16px;padding:10px 13px;background:var(--paper);border:1px solid var(--rule);border-top:none;font-family:var(--mono);font-size:9px;font-weight:700;letter-spacing:.06em;color:var(--text3)">
+          <span style="color:var(--rose)">■</span> STANDARD &nbsp;
+          <span style="color:var(--sage)">■</span> CARY-SETTLED &nbsp;
+          <span style="color:var(--amber)">■</span> UPLIFT
+        </div>
+      </div>
+      <div class="uc-nar reveal d2">
+        <div class="nb" style="border-left-color:var(--slate)">
+          <div class="nb-title">Why Voice Carriers Are the Primary Addressable Market</div>
+          <div class="nb-body">Voice traffic is commoditised, high-volume, and razor-thin-margin. Carriers process hundreds of millions of minutes at 2–4% gross margin. CARY's 10% discount converts each settlement into a margin optimisation event — rational lock-in follows adoption.</div>
+        </div>
+        <div class="nb" style="border-left-color:var(--amber)">
+          <div class="nb-title">The CFO-Level Rational Adoption Argument</div>
+          <div class="nb-body">For a carrier settling $1M/month of DSW-Europe invoices, the annual CARY saving is <strong>$1.2M</strong>. The adoption decision is not a crypto investment thesis — it is a straightforward cost reduction initiative that passes any internal IRR threshold.</div>
+        </div>
+        <div class="nb" style="border-left-color:var(--sage)">
+          <div class="nb-title">CaspiCoin — Expanded Ecosystem</div>
+          <div class="nb-body">The CARY ecosystem extends to CaspiCoin, a parallel issuance vehicle connecting infrastructure networks at adjacent telecom stack layers. Both tokens follow the same MiCA-aligned utility architecture, enabling multi-tier capital generation from the same base.</div>
+        </div>
+        <div style="padding:13px 16px;background:var(--slate);border-radius:4px;text-align:center">
+          <div style="font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--amber2);margin-bottom:8px">Experience the Payment Flow Live</div>
+          <a href="https://cary.nexa9.co" target="_blank" rel="noopener" class="btn btn-amber" style="width:100%;justify-content:center">→ cary.nexa9.co</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MARKET -->
+<section id="market">
+  <div class="container">
+    <hr class="hr" style="margin-bottom:56px">
+    <div class="reveal">
+      <div class="eyebrow"><span class="eline"></span>Chapter 03 — Market Context</div>
+      <div class="racc"></div>
+      <h2 class="section-h">The Macro Tailwind<br><span class="a">Behind CARY</span></h2>
+      <p class="section-lead">CARY enters the market precisely when global infrastructure for revenue-backed utility tokens is crystallising — a structural first-mover window.</p>
+    </div>
+    <div style="height:40px"></div>
+
+    <div class="mkt-r1">
+      <div class="chart-box reveal">
+        <div class="ch"><span class="ch-title">Digital Asset Market by Segment — 2026 (USD)</span><span class="ch-sub">Indicative</span></div>
+        <div class="cb" id="hb-market">
+          <div class="hb-item"><div class="hb-meta"><span class="hb-name">Global Stablecoin Market</span><span class="hb-val">$230B+</span></div><div class="hb-track"><div class="hb-fill" style="background:var(--slate);--w:95%"></div></div></div>
+          <div class="hb-item"><div class="hb-meta"><span class="hb-name">DeFi Token Ecosystem</span><span class="hb-val">$85B</span></div><div class="hb-track"><div class="hb-fill" style="background:var(--slate2);--w:72%"></div></div></div>
+          <div class="hb-item"><div class="hb-meta"><span class="hb-name" style="font-weight:700;color:var(--slate)">RWA Tokenized Assets — CARY's Tier</span><span class="hb-val" style="color:var(--amber)">$11.5B</span></div><div class="hb-track"><div class="hb-fill" style="background:var(--amber);--w:44%"></div></div></div>
+          <div class="hb-item"><div class="hb-meta"><span class="hb-name">DePIN Infrastructure Tokens</span><span class="hb-val">$4.8B</span></div><div class="hb-track"><div class="hb-fill" style="background:var(--steel);--w:28%"></div></div></div>
+          <div class="hb-item"><div class="hb-meta"><span class="hb-name">B2B Telecom Utility Tokens</span><span class="hb-val">$520M</span></div><div class="hb-track"><div class="hb-fill" style="background:var(--amber2);--w:14%"></div></div></div>
+        </div>
+      </div>
+      <div class="chart-box reveal d2">
+        <div class="ch"><span class="ch-title">CARY Market Position</span></div>
+        <div class="stat-hl"><div class="sh-num">$11.5B</div><div class="sh-label">RWA Tokenized AUM</div><div class="sh-sub">CARY's natural asset class (2026)</div></div>
+        <hr class="hr" style="margin:0 20px">
+        <div class="stat-hl"><div class="sh-num" style="color:var(--amber);font-size:34px">3–5×</div><div class="sh-label">Structural Margin Uplift</div><div class="sh-sub">Quantifiable, immediate, structural</div></div>
+        <hr class="hr" style="margin:0 20px">
+        <div class="stat-hl"><div class="sh-num" style="font-size:30px;color:var(--sage)">40+</div><div class="sh-label">CASP Licences Issued EU</div><div class="sh-sub">MiCA compliance infrastructure live</div></div>
+      </div>
+    </div>
+
+    <div class="mkt-r2">
+      <!-- Regulatory coverage stacked bar -->
+      <div class="chart-box reveal">
+        <div class="ch"><span class="ch-title">Regulatory Coverage by Jurisdiction</span><span class="ch-sub">% global volume</span></div>
+        <div class="cb">
+          <div style="font-family:var(--mono);font-size:9px;color:var(--text4);margin-bottom:6px;letter-spacing:.06em;text-transform:uppercase">% of global volume under formal framework</div>
+          <div class="sbar" id="sbar-reg">
+            <div class="sb-s" style="background:var(--slate);--w:38%"></div>
+            <div class="sb-s" style="background:var(--amber);--w:22%"></div>
+            <div class="sb-s" style="background:var(--steel);--w:14%"></div>
+            <div class="sb-s" style="background:var(--sage);--w:10%"></div>
+            <div class="sb-s" style="background:var(--rule);--w:16%"></div>
+          </div>
+          <div class="sb-leg">
+            <div class="sb-li"><div class="sb-dot" style="background:var(--slate)"></div>EU MiCA (38%)</div>
+            <div class="sb-li"><div class="sb-dot" style="background:var(--amber)"></div>US GENIUS (22%)</div>
+            <div class="sb-li"><div class="sb-dot" style="background:var(--steel)"></div>Singapore (14%)</div>
+            <div class="sb-li"><div class="sb-dot" style="background:var(--sage)"></div>UAE/HK (10%)</div>
+            <div class="sb-li"><div class="sb-dot" style="background:var(--rule)"></div>Other (16%)</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Institutional Pilot Rate — SVG donut, no broken strokeDasharray -->
+      <div class="chart-box reveal d2">
+        <div class="ch"><span class="ch-title">Institutional Pilot Rate</span><span class="ch-sub">Tokenized settlement, Fortune 500</span></div>
+        <div class="cb">
+          <div class="ring-box">
+            <svg width="150" height="150" viewBox="0 0 150 150" id="ring-svg1" xmlns="http://www.w3.org/2000/svg">
+              <!-- Track arc -->
+              <circle cx="75" cy="75" r="56" fill="none" stroke="var(--rule)" stroke-width="22"/>
+              <!-- Fill arc drawn via JS after load -->
+              <path id="ring-arc1" fill="none" stroke="var(--amber)" stroke-width="22" stroke-linecap="butt" d=""/>
+            </svg>
+            <div class="ring-label-main" id="ring-pct1">0%</div>
+            <div class="ring-label-sub">Fortune 500 piloting</div>
+          </div>
+          <p style="font-size:12px;color:var(--text3);text-align:center;line-height:1.62;margin-top:12px;font-weight:300">Post-MiCA and GENIUS Act clarity has accelerated institutional pilots. Revenue-backed models like CARY are best-positioned for enterprise adoption.</p>
+        </div>
+      </div>
+
+      <!-- RWA AUM Growth — fixed SVG sparkline -->
+      <div class="chart-box reveal d3">
+        <div class="ch"><span class="ch-title">RWA Token AUM Growth</span><span class="ch-sub">2022–2026 (USD Billions)</span></div>
+        <div class="cb">
+          <!-- Simple SVG chart, no JS dependency for rendering -->
+          <svg viewBox="0 0 280 120" style="width:100%;height:110px;display:block;overflow:visible" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
+            <!-- Grid -->
+            <line x1="30" y1="10" x2="30" y2="88" stroke="var(--rule)" stroke-width="1"/>
+            <line x1="30" y1="88" x2="272" y2="88" stroke="var(--rule)" stroke-width="1"/>
+            <line x1="30" y1="55" x2="272" y2="55" stroke="var(--rule)" stroke-width="0.8" stroke-dasharray="4 4"/>
+            <line x1="30" y1="30" x2="272" y2="30" stroke="var(--rule)" stroke-width="0.8" stroke-dasharray="4 4"/>
+            <!-- Y labels -->
+            <text x="26" y="91" fill="var(--text4)" font-size="9" font-family="Space Mono" text-anchor="end">0</text>
+            <text x="26" y="58" fill="var(--text4)" font-size="9" font-family="Space Mono" text-anchor="end">5B</text>
+            <text x="26" y="33" fill="var(--text4)" font-size="9" font-family="Space Mono" text-anchor="end">10B</text>
+            <!-- Data points mapped: 2022=0.8B, 2023=1.5B, 2024=3.2B, 2025=6.8B, 2026=11.5B
+                 Y range 0–12B → 88 to 10 = 78px range. y = 88 - (val/12)*78 -->
+            <!-- 0.8B → 88-5.2=82.8  1.5B→88-9.75=78.25  3.2B→88-20.8=67.2  6.8B→88-44.2=43.8  11.5B→88-74.75=13.25 -->
+            <!-- X positions: 2022=55, 2023=105, 2024=155, 2025=205, 2026=255 -->
+            <!-- Shaded area -->
+            <polygon points="55,82.8 105,78.25 155,67.2 205,43.8 255,13.25 255,88 55,88" fill="rgba(232,132,10,.08)"/>
+            <!-- Line -->
+            <polyline points="55,82.8 105,78.25 155,67.2 205,43.8 255,13.25" fill="none" stroke="var(--amber)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <!-- Dots -->
+            <circle cx="55"  cy="82.8"  r="4" fill="var(--white)" stroke="var(--amber)" stroke-width="2"/>
+            <circle cx="105" cy="78.25" r="4" fill="var(--white)" stroke="var(--amber)" stroke-width="2"/>
+            <circle cx="155" cy="67.2"  r="4" fill="var(--white)" stroke="var(--amber)" stroke-width="2"/>
+            <circle cx="205" cy="43.8"  r="4" fill="var(--amber2)" stroke="var(--amber)" stroke-width="2"/>
+            <circle cx="255" cy="13.25" r="5.5" fill="var(--amber)" stroke="var(--slate)"  stroke-width="2"/>
+            <!-- X labels -->
+            <text x="55"  y="102" fill="var(--text4)" font-size="9" font-family="Space Mono" text-anchor="middle">2022</text>
+            <text x="105" y="102" fill="var(--text4)" font-size="9" font-family="Space Mono" text-anchor="middle">2023</text>
+            <text x="155" y="102" fill="var(--text4)" font-size="9" font-family="Space Mono" text-anchor="middle">2024</text>
+            <text x="205" y="102" fill="var(--text4)" font-size="9" font-family="Space Mono" text-anchor="middle">2025</text>
+            <text x="255" y="102" fill="var(--amber)" font-size="9" font-family="Space Mono" text-anchor="middle" font-weight="700">2026</text>
+            <!-- Value labels -->
+            <text x="261" y="14"  fill="var(--amber)" font-size="9" font-family="Space Mono" font-weight="700">$11.5B</text>
+            <text x="211" y="42"  fill="var(--text3)" font-size="8" font-family="Space Mono">$6.8B</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REGULATORY -->
+<section id="regulatory">
+  <div class="container">
+    <hr class="hr" style="margin-bottom:56px">
+    <div class="reveal">
+      <div class="eyebrow"><span class="eline"></span>Chapter 04 — Regulatory Architecture</div>
+      <div class="racc"></div>
+      <h2 class="section-h">MiCA &amp; Global<br><span class="a">Compliance Positioning</span></h2>
+      <p class="section-lead">CARY is engineered from first principles for the post-MiCA environment. Compliance is not a constraint — it is a structural moat against late entrants.</p>
+    </div>
+    <div class="reg-grid">
+      <div class="reveal d1">
+        <h3 style="font-family:var(--disp);font-size:18px;font-weight:700;color:var(--slate);margin-bottom:26px;letter-spacing:-.02em">MiCA Enforcement Timeline</h3>
+        <div class="tl">
+          <div class="tl-item"><div class="tl-dot" style="background:var(--slate)"></div><div class="tl-date">JUNE 2024</div><div class="tl-title">Stablecoin Rules Live (ART/EMT)</div><div class="tl-desc">ART and EMT tokens subject to full MiCA reserve, redemption, and supervision requirements across the EU.</div><div class="tl-tag"><span class="tag tag-slate">Complete</span></div></div>
+          <div class="tl-item"><div class="tl-dot" style="background:var(--amber)"></div><div class="tl-date">DECEMBER 2024</div><div class="tl-title">CASP Authorisation Required</div><div class="tl-desc">Crypto-asset service providers must hold MiCA authorisation to operate and passport services across all EU member states.</div><div class="tl-tag"><span class="tag tag-slate">Complete</span></div></div>
+          <div class="tl-item"><div class="tl-dot" style="background:var(--amber2)"></div><div class="tl-date">H1 2025</div><div class="tl-title">40+ CASP Licences Issued</div><div class="tl-desc">ESMA enforcement begins. USDT delisted from EU exchanges due to non-compliance. Compliant operators gain decisive market share.</div><div class="tl-tag"><span class="tag tag-steel">Underway</span></div></div>
+          <div class="tl-item"><div class="tl-dot" style="background:var(--rose)"></div><div class="tl-date">JULY 1, 2026</div><div class="tl-title">Full Transitional Period Ends</div><div class="tl-desc">Non-authorised entities must cease EU crypto-asset services. No further grace periods.</div><div class="tl-tag"><span class="tag tag-rose">Hard Deadline</span></div></div>
+          <div class="tl-item"><div class="tl-dot" style="background:var(--amber)"></div><div class="tl-date">CARY LAUNCH WINDOW</div><div class="tl-title">MiCA-Native Positioning</div><div class="tl-desc">CARY enters as a purpose-built utility token — "Other Crypto-Assets" classification with the lightest disclosure requirements and no transaction caps.</div><div class="tl-tag"><span class="tag tag-amber">Strategic</span></div></div>
+        </div>
+      </div>
+      <div class="reveal d2">
+        <h3 style="font-family:var(--disp);font-size:18px;font-weight:700;color:var(--slate);margin-bottom:18px;letter-spacing:-.02em">Global Regulatory Convergence</h3>
+        <div class="juris">
+          <div class="jc"><span class="jc-flag">🇪🇺</span><div class="jc-name">EU — MiCA</div><div class="jc-body">Utility tokens as "Other Crypto-Assets" — light disclosure burden. No ART/EMT transaction caps apply.</div><div class="jc-status"><span class="tag tag-sage">✓ CARY Aligned</span></div></div>
+          <div class="jc"><span class="jc-flag">🇺🇸</span><div class="jc-name">US — GENIUS Act</div><div class="jc-body">Focused on stablecoin prudential standards. Revenue-backed utility models sit outside stablecoin classification.</div><div class="jc-status"><span class="tag tag-steel">◎ Monitoring</span></div></div>
+          <div class="jc"><span class="jc-flag">🇦🇪</span><div class="jc-name">UAE — CBUAE/VARA</div><div class="jc-body">Layered federal + regional framework. Payment token regulation effective August 2024. Utility pathway clear.</div><div class="jc-status"><span class="tag tag-amber">◎ Pathway Clear</span></div></div>
+          <div class="jc"><span class="jc-flag">🇸🇬</span><div class="jc-name">Singapore — MAS</div><div class="jc-body">World's most detailed stablecoin framework (G10-pegged). Utility tokens need separate PSA framework analysis.</div><div class="jc-status"><span class="tag tag-steel">◎ Monitoring</span></div></div>
+        </div>
+        <div class="comp-profile">
+          <div class="cp-title">CARY MiCA Compliance Profile</div>
+          <div class="cp-row"><span class="cp-check">✓</span><span class="cp-text"><strong>Classification:</strong> "Other Crypto-Assets" — no reserve or redemption mandates required</span></div>
+          <div class="cp-row"><span class="cp-check">✓</span><span class="cp-text"><strong>No caps:</strong> ART/EMT €200M daily cap does not apply to utility tokens</span></div>
+          <div class="cp-row"><span class="cp-check">✓</span><span class="cp-text"><strong>White paper:</strong> 4–6 week pathway; iXBRL format supported from Dec 2025</span></div>
+          <div class="cp-row"><span class="cp-check">✓</span><span class="cp-text"><strong>DSW-Europe anchor:</strong> EU-domiciled operating entity provides credible compliance narrative</span></div>
+          <div class="cp-row"><span class="cp-check">✓</span><span class="cp-text"><strong>First-mover:</strong> Non-compliant competitors must cease EU operations by July 1, 2026</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPETITIVE -->
+<section id="competitive">
+  <div class="container">
+    <hr class="hr" style="margin-bottom:56px">
+    <div class="reveal">
+      <div class="eyebrow"><span class="eline"></span>Chapter 05 — Competitive Landscape</div>
+      <div class="racc"></div>
+      <h2 class="section-h">CARY vs<br><span class="a">Adjacent Models</span></h2>
+      <p class="section-lead">More conservative than speculative DeFi, more structured than generic stablecoins, more accessible than traditional fintech instruments.</p>
+    </div>
+    <div class="ctab reveal">
+      <div class="ct-head">
+        <div class="ctd hd">Dimension</div>
+        <div class="ctd hd ca">◈ CARY</div>
+        <div class="ctd hd">USDT / USDC</div>
+        <div class="ctd hd">DeFi Utility</div>
+        <div class="ctd hd">B2B Fintech</div>
+      </div>
+      <div class="ct-row"><div class="ctd ft">Revenue-Backed Value Floor</div><div class="ctd cv"><span class="yes">✓</span> DSW-Europe live revenue</div><div class="ctd"><span class="par">◎</span> Reserve-backed</div><div class="ctd"><span class="no">✗</span> Protocol-dependent</div><div class="ctd"><span class="yes">✓</span> P&amp;L backed</div></div>
+      <div class="ct-row alt"><div class="ctd ft">MiCA Regulatory Pathway</div><div class="ctd cv"><span class="yes">✓</span> Utility — light touch</div><div class="ctd"><span class="par">◎</span> EMT — heavy burden</div><div class="ctd"><span class="no">✗</span> Largely unresolved</div><div class="ctd"><span class="yes">✓</span> PSD2 licensed</div></div>
+      <div class="ct-row"><div class="ctd ft">Structural Margin Enhancement</div><div class="ctd cv"><span class="yes">✓</span> +10–12% uplift</div><div class="ctd"><span class="no">✗</span> None</div><div class="ctd"><span class="no">✗</span> None</div><div class="ctd"><span class="no">✗</span> Marginal</div></div>
+      <div class="ct-row alt"><div class="ctd ft">B2B Invoice Settlement Native</div><div class="ctd cv"><span class="yes">✓</span> Core function</div><div class="ctd"><span class="par">◎</span> Emerging</div><div class="ctd"><span class="no">✗</span> Not designed for</div><div class="ctd"><span class="par">◎</span> FX overhead</div></div>
+      <div class="ct-row"><div class="ctd ft">Demand Independent of Speculation</div><div class="ctd cv"><span class="yes">✓</span> Discount floor</div><div class="ctd"><span class="yes">✓</span> Peg stability</div><div class="ctd"><span class="no">✗</span> Speculation-driven</div><div class="ctd"><span class="yes">✓</span> Service-driven</div></div>
+      <div class="ct-row alt"><div class="ctd ft">Institutional Telecom Infra Access</div><div class="ctd cv"><span class="yes">✓</span> Unique vehicle</div><div class="ctd"><span class="no">✗</span> None</div><div class="ctd"><span class="no">✗</span> None</div><div class="ctd"><span class="no">✗</span> Operator-level only</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- TOKENOMICS -->
+<section id="tokenomics">
+  <div class="container">
+    <hr class="hr" style="margin-bottom:56px">
+    <div class="reveal">
+      <div class="eyebrow"><span class="eline"></span>Chapter 06 — Token Economics</div>
+      <div class="racc"></div>
+      <h2 class="section-h">Tokenomics &amp;<br><span class="a">Demand Architecture</span></h2>
+      <p class="section-lead">Every token in circulation represents a live economic incentive for a commercial counterparty to hold and use it.</p>
+    </div>
+    <div class="tok-grid">
+      <div class="reveal d1">
+        <div class="tok-table">
+          <div class="tok-thead">Token Allocation — CARY Issuance Structure</div>
+          <div class="tok-row"><div class="tok-sw" style="background:var(--slate)"></div><div><div class="tok-name">Primary Market</div><div class="tok-desc">Revenue-tied, DSW-Europe</div></div><div class="tok-bar"><div class="tok-fill" style="background:var(--slate);--w:40%"></div></div><div class="tok-pct">40%</div></div>
+          <div class="tok-row"><div class="tok-sw" style="background:var(--amber)"></div><div><div class="tok-name">Partner Network</div><div class="tok-desc">Viber, DT, Apelby + pipeline</div></div><div class="tok-bar"><div class="tok-fill" style="background:var(--amber);--w:25%"></div></div><div class="tok-pct">25%</div></div>
+          <div class="tok-row"><div class="tok-sw" style="background:var(--steel)"></div><div><div class="tok-name">Open Market Reserve</div><div class="tok-desc">Exchange liquidity float</div></div><div class="tok-bar"><div class="tok-fill" style="background:var(--steel);--w:20%"></div></div><div class="tok-pct">20%</div></div>
+          <div class="tok-row"><div class="tok-sw" style="background:var(--sage)"></div><div><div class="tok-name">Team &amp; Development</div><div class="tok-desc">Long-term vesting schedule</div></div><div class="tok-bar"><div class="tok-fill" style="background:var(--sage);--w:15%"></div></div><div class="tok-pct">15%</div></div>
+        </div>
+
+        <!-- Allocation ring — SVG arc based -->
+        <div class="tok-ring-card" style="margin-top:14px">
+          <div style="font-family:var(--mono);font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--text3);margin-bottom:12px">Allocation Breakdown</div>
+          <div class="tok-ring-inner">
+            <svg width="120" height="120" viewBox="0 0 120 120" id="tok-ring-svg" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="60" cy="60" r="44" fill="none" stroke="var(--rule)" stroke-width="18"/>
+              <!-- Segments drawn by JS -->
+              <path id="tok-arc-1" fill="none" stroke="var(--slate)"  stroke-width="18" stroke-linecap="butt" d=""/>
+              <path id="tok-arc-2" fill="none" stroke="var(--amber)"  stroke-width="18" stroke-linecap="butt" d=""/>
+              <path id="tok-arc-3" fill="none" stroke="var(--steel)"  stroke-width="18" stroke-linecap="butt" d=""/>
+              <path id="tok-arc-4" fill="none" stroke="var(--sage)"   stroke-width="18" stroke-linecap="butt" d=""/>
+              <text x="60" y="56" text-anchor="middle" fill="var(--slate)" font-family="Outfit" font-size="12" font-weight="900">CARY</text>
+              <text x="60" y="70" text-anchor="middle" fill="var(--text3)" font-family="Space Mono" font-size="8">Supply</text>
+            </svg>
+            <div style="flex:1;min-width:100px;display:flex;flex-direction:column;gap:8px">
+              <div style="display:flex;align-items:center;gap:7px;font-size:12px"><div style="width:9px;height:9px;background:var(--slate);border-radius:1px"></div>Primary (40%)</div>
+              <div style="display:flex;align-items:center;gap:7px;font-size:12px"><div style="width:9px;height:9px;background:var(--amber);border-radius:1px"></div>Partners (25%)</div>
+              <div style="display:flex;align-items:center;gap:7px;font-size:12px"><div style="width:9px;height:9px;background:var(--steel);border-radius:1px"></div>Open Mkt (20%)</div>
+              <div style="display:flex;align-items:center;gap:7px;font-size:12px"><div style="width:9px;height:9px;background:var(--sage);border-radius:1px"></div>Team (15%)</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="demand-col reveal d2">
+        <div class="de-card"><div class="de-num" style="color:var(--slate)">$1.2M</div><div class="de-label">Annual saving per $1M/month settler</div><div class="de-desc">A partner settling $1M/month of DSW-Europe invoices in CARY saves $100K/month — $1.2M/year. A pure cost reduction decision, not a crypto investment thesis.</div></div>
+        <div class="de-card"><div class="de-num" style="color:var(--amber)">10%</div><div class="de-label">Guaranteed discount — the demand anchor</div><div class="de-desc">Structural and binary. Creates a rational, non-speculative demand floor entirely decoupled from market sentiment. Holders benefit simply by using the token for its designed purpose.</div></div>
+        <div class="fw-card">
+          <svg viewBox="0 0 300 200" style="width:100%;max-width:300px;display:block;margin:0 auto 10px" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="150" cy="100" r="72" fill="none" stroke="var(--rule)" stroke-width="1" stroke-dasharray="5 4"/>
+            <circle cx="150" cy="28"  r="24" fill="var(--slate)"/>
+            <text x="150" y="25" text-anchor="middle" fill="white" font-family="Outfit" font-size="8" font-weight="700">More</text>
+            <text x="150" y="36" text-anchor="middle" fill="white" font-family="Outfit" font-size="8" font-weight="700">Partners</text>
+            <circle cx="230" cy="132" r="24" fill="var(--amber)"/>
+            <text x="230" y="129" text-anchor="middle" fill="white" font-family="Outfit" font-size="8" font-weight="700">Higher</text>
+            <text x="230" y="140" text-anchor="middle" fill="white" font-family="Outfit" font-size="8" font-weight="700">Revenue</text>
+            <circle cx="70"  cy="132" r="24" fill="var(--sage)"/>
+            <text x="70"  y="129" text-anchor="middle" fill="white" font-family="Outfit" font-size="8" font-weight="700">Deeper</text>
+            <text x="70"  y="140" text-anchor="middle" fill="white" font-family="Outfit" font-size="8" font-weight="700">Liquidity</text>
+            <path d="M174,42 Q220,58 215,110" stroke="rgba(232,132,10,.5)" stroke-width="1.5" fill="none" stroke-dasharray="4 3"/>
+            <path d="M208,154 Q162,186 94,155" stroke="rgba(232,132,10,.5)" stroke-width="1.5" fill="none" stroke-dasharray="4 3"/>
+            <path d="M88,110 Q80,62 130,43" stroke="rgba(232,132,10,.5)" stroke-width="1.5" fill="none" stroke-dasharray="4 3"/>
+            <circle cx="150" cy="100" r="24" fill="var(--paper)" stroke="var(--amber)" stroke-width="1.5"/>
+            <text x="150" y="97"  text-anchor="middle" fill="var(--slate)" font-family="Outfit" font-size="11" font-weight="900">CARY</text>
+            <text x="150" y="109" text-anchor="middle" fill="var(--amber)" font-family="Space Mono" font-size="7" font-weight="700">FLYWHEEL</text>
+          </svg>
+          <p class="fw-cap">More partners → higher revenue per invoice → deeper secondary liquidity → lower acquisition cost for new partners. Self-reinforcing, independent of token price.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ROADMAP -->
+<section id="roadmap">
+  <div class="container">
+    <hr class="hr" style="margin-bottom:56px">
+    <div class="reveal">
+      <div class="eyebrow"><span class="eline"></span>Chapter 07 — Launch Roadmap</div>
+      <div class="racc"></div>
+      <h2 class="section-h">POC to Open Market:<br><span class="a">9–12 Weeks</span></h2>
+      <p class="section-lead">Engineering complete. The launch pathway is governance, legal, and go-to-market — not development.</p>
+    </div>
+    <div class="rm-phases">
+      <div class="rm-col reveal"><div class="rm-dot" style="border-color:var(--sage);color:var(--sage)">✓</div><div class="rm-tag" style="color:var(--sage)">Complete</div><div class="rm-title">POC Delivered</div><div class="rm-bul">Full Solana stack<br>Closed market live<br>Wallet infra<br>cary.nexa9.co active</div></div>
+      <div class="rm-col reveal d1"><div class="rm-dot" style="border-color:var(--slate);color:var(--slate)">📋</div><div class="rm-tag" style="color:var(--slate)">Wks 1–3</div><div class="rm-title">Funding &amp; Legal</div><div class="rm-bul">Investor docs<br>MiCA white paper<br>Legal entity review<br>Board approval</div></div>
+      <div class="rm-col reveal d2"><div class="rm-dot" style="border-color:var(--amber);color:var(--amber)">🏗️</div><div class="rm-tag" style="color:var(--amber)">Wks 2–6</div><div class="rm-title">Issuance Design</div><div class="rm-bul">Tokenomics locked<br>Contract audit<br>Supply model final<br>Partner agreements</div></div>
+      <div class="rm-col reveal d3"><div class="rm-dot" style="border-color:var(--steel);color:var(--steel)">🚀</div><div class="rm-tag" style="color:var(--steel)">Wks 6–9</div><div class="rm-title">Initial Issuance</div><div class="rm-bul">Anchor investor close<br>Pre-allocations<br>Pilot activation<br>Liquidity seeding</div></div>
+      <div class="rm-col reveal d4"><div class="rm-dot" style="border-color:var(--amber2);color:var(--amber2)">🌐</div><div class="rm-tag" style="color:var(--amber2)">Wks 9–12+</div><div class="rm-title">Open Market Scale</div><div class="rm-bul">Exchange listing<br>Secondary trading<br>Subsequent issuances<br>CaspiCoin integration</div></div>
+    </div>
+    <div class="rm-cta reveal"><div class="rm-badge">⏱ 9–12 Weeks · Board Approval → First Institutional Issuance</div></div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="cta">
+  <div class="container">
+    <div class="cta-inner">
+      <div class="reveal">
+        <div class="eyebrow" style="color:var(--amber2)"><span class="eline" style="background:var(--amber2)"></span>Take the Next Step</div>
+        <h2 class="cta-h">Experience<br><span class="a">CARY</span><br>in Action</h2>
+        <p class="cta-body">The prototype is live, the economics are proven, and the open-market window is open. See a fully functional utility coin built for institutional B2B commerce — not speculation.</p>
+        <div class="cta-btns">
+          <a href="https://cary.nexa9.co" target="_blank" rel="noopener" class="btn btn-amber">Launch Prototype →</a>
+          <a href="https://cary.nexa9.co" target="_blank" rel="noopener" class="btn btn-ghost">Request Partnership Deck</a>
+        </div>
+        <div class="cta-url"><a href="https://cary.nexa9.co" target="_blank" rel="noopener">cary.nexa9.co</a></div>
+      </div>
+      <div class="cta-cards reveal d2">
+        <div class="cta-card"><div class="cta-icon">⚡</div><div><div class="cta-card-title">Live &amp; Functional</div><div class="cta-card-desc">Fully operational on Solana. No sign-up required to explore payment mechanics and token interface.</div></div></div>
+        <div class="cta-card"><div class="cta-icon">🏛️</div><div><div class="cta-card-title">MiCA-Aligned Architecture</div><div class="cta-card-desc">"Other Crypto-Assets" classification — lightest MiCA treatment, fully compatible post-July 2026.</div></div></div>
+        <div class="cta-card"><div class="cta-icon">📈</div><div><div class="cta-card-title">Quantified ROI</div><div class="cta-card-desc">3–5× margin uplift. $1.2M annual saving per $1M/month settler. Numbers work on first principles.</div></div></div>
+        <div class="cta-card"><div class="cta-icon">🗓️</div><div><div class="cta-card-title">9–12 Week Window</div><div class="cta-card-desc">Engineering complete. Open market launch achievable within 12 weeks of board approval.</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span>◈ CARY — Carrier Coin · Institutional Overview · May 2026</span>
+  <span><a href="https://cary.nexa9.co" target="_blank">cary.nexa9.co</a> · DSW-Europe · Solana · ETH 2.0 · MiCA-Aligned</span>
+</footer>
+
+<script>
+/* ---------- Progress bar ---------- */
+const pb=document.getElementById('pbar');
+window.addEventListener('scroll',()=>{pb.style.width=(window.scrollY/(document.documentElement.scrollHeight-window.innerHeight)*100)+'%'},{passive:true});
+
+/* ---------- Reveal ---------- */
+const ro=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('in')}),{threshold:.1,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>ro.observe(el));
+
+/* ---------- Active nav ---------- */
+const no=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){const id=x.target.id;document.querySelectorAll('.nav-links a:not(.nav-cta)').forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+id))}}),{threshold:.3});
+document.querySelectorAll('section[id]').forEach(s=>no.observe(s));
+
+/* ---------- Smooth scroll ---------- */
+document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{const t=document.querySelector(a.getAttribute('href'));if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'})}}));
+
+/* ---------- Count-up ---------- */
+function cu(el,target,dur=1400){const s=performance.now();(function f(){const p=Math.min((performance.now()-s)/dur,1),v=Math.floor((1-Math.pow(1-p,3))*target);el.textContent=v;if(p<1)requestAnimationFrame(f);else el.textContent=target})()}
+const cuObs=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){cu(x.target,+x.target.dataset.target);cuObs.unobserve(x.target)}}),{threshold:.5});
+document.querySelectorAll('.count-up').forEach(el=>cuObs.observe(el));
+
+/* ---------- Horizontal bars ---------- */
+function animBars(c){c.querySelectorAll('.hb-fill,.sb-s,.tok-fill').forEach(b=>{const m=b.style.cssText.match(/--w:\s*([\d.]+%)/);if(m)b.style.width=m[1]})}
+const bObs=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){animBars(x.target);bObs.unobserve(x.target)}}),{threshold:.2});
+['#hb-market','#sbar-reg','.tok-table'].forEach(sel=>document.querySelectorAll(sel).forEach(el=>bObs.observe(el)));
+
+/* ---------- Arc helper — draw SVG arc segment ---------- */
+function arcPath(cx,cy,r,startDeg,endDeg){
+  const rad=Math.PI/180;
+  const s={x:cx+r*Math.cos((startDeg-90)*rad),y:cy+r*Math.sin((startDeg-90)*rad)};
+  const en={x:cx+r*Math.cos((endDeg-90)*rad),y:cy+r*Math.sin((endDeg-90)*rad)};
+  const large=(endDeg-startDeg)>180?1:0;
+  return `M${s.x},${s.y} A${r},${r} 0 ${large} 1 ${en.x},${en.y}`;
+}
+
+/* ---------- Ring chart 1 — Institutional Pilot Rate ---------- */
+(function(){
+  const arc=document.getElementById('ring-arc1');
+  const pct=document.getElementById('ring-pct1');
+  if(!arc)return;
+  const obs=new IntersectionObserver(entries=>{
+    if(!entries[0].isIntersecting)return;
+    obs.disconnect();
+    let start=null;
+    const target=23, cx=75, cy=75, r=56;
+    function step(ts){
+      if(!start)start=ts;
+      const p=Math.min((ts-start)/1400,1),ep=1-Math.pow(1-p,3),deg=ep*target*3.6;
+      if(deg>0.1)arc.setAttribute('d',arcPath(cx,cy,r,0,Math.min(deg,359.9)));
+      pct.textContent=Math.round(ep*target)+'%';
+      if(p<1)requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  },{threshold:.4});
+  const parent=document.getElementById('ring-svg1');
+  if(parent)obs.observe(parent.closest('.chart-box'));
+})();
+
+/* ---------- Allocation donut (tokenomics) ---------- */
+(function(){
+  const segs=[
+    {id:'tok-arc-1',pct:40},{id:'tok-arc-2',pct:25},
+    {id:'tok-arc-3',pct:20},{id:'tok-arc-4',pct:15}
+  ];
+  const cx=60,cy=60,r=44;
+  const obs=new IntersectionObserver(entries=>{
+    if(!entries[0].isIntersecting)return;
+    obs.disconnect();
+    let offset=0;
+    segs.forEach((s,i)=>{
+      const el=document.getElementById(s.id);
+      if(!el)return;
+      const gap=2, startDeg=offset*3.6+gap/2, endDeg=(offset+s.pct)*3.6-gap/2;
+      const finalPath=arcPath(cx,cy,r,startDeg,endDeg);
+      let start2=null;
+      setTimeout(()=>{
+        (function anim(ts){
+          if(!start2)start2=ts;
+          const p=Math.min((ts-start2)/1000,1),ep=1-Math.pow(1-p,3);
+          const sDeg=startDeg, eDeg=startDeg+(endDeg-startDeg)*ep;
+          if(eDeg>sDeg+0.2)el.setAttribute('d',arcPath(cx,cy,r,sDeg,eDeg));
+          if(p<1)requestAnimationFrame(anim);
+          else el.setAttribute('d',finalPath);
+        })();
+      },i*180);
+      offset+=s.pct;
+    });
+  },{threshold:.3});
+  const rv=document.getElementById('tok-ring-svg');
+  if(rv)obs.observe(rv.closest('.tok-ring-card'));
+})();
+</script>
+</body>
+</html>
